@@ -1,30 +1,20 @@
-﻿Program f43fvd;
-var
-   A,B,C: real;
-   X1, X2: real;
-   D:real;
+program f43fvd;
+var A, B, C, X1, X2, D: real;
 begin
-Writeln('                                   
-writeln('                                
-  writeln ('Введите коэффициент A,B,C');
-  readln (A,B,C);
-  if A=0
-  then if B=0
-      then writeln ('Уравнение выражено')
-      else writeln ('Единственный корень x = ',-C/B:6:3)
-  else
-    begin
-      D:=B*B-4*A*C;
-      A:=2*A;
-      if D<0
-    then writeln ('Rорней нет')
-     else if D=0
-     then writeln ('Корни равны: X1=X2', -B/A:6:3)
-     else
-        begin
-           D:=Sqrt(D);
-           writeln ('Первый корень = ', (-B+D)/A:6:3);
-             writeln ('Второй корень = ', (-B-D)/A:6:3);
-          end;
-     end;
+writeln ('Введите коэффициент A,B,C');
+readln (A,B,C);
+D:=B*B-4*A*C;
+if d>=0 then begin
+                x1:=(-b+sqrt(d))/(2*a);
+                x2:=(-b-sqrt(d))/(2*a);
+                writeln('У вашего уравнения 2 корня: ', 'x1 = ', x1:6:2, '; x2 = ', x2:6:2);
+               end
+           else
+            if d=0 then begin
+                         x1:=(-b/2*a);
+                         writeln('У вашего уравнения 1 корень: ', 'x1 = ', x1:6:2);
+                         
+            end   
+            else
+              writeln('У вашего уравнения корней нет(((((((((((');
 end.
